@@ -3,12 +3,21 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardDescription,
-  CardTitle,
-  CardHeader,
   CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
-import { BarChart3, CheckCircle, MessageSquare, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  CheckCircle,
+  Globe,
+  MessageSquare,
+  Shield,
+  ShieldCheck,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -198,7 +207,9 @@ export default function Home() {
                   <span className="text-4xl font-bold bg-linear-to-r from-blue-600 to-cyan-600 text-transparent bg-clip-text">
                     19.-
                   </span>
-                  <span className="text-base text-muted-foreground">/ mois</span>
+                  <span className="text-base text-muted-foreground">
+                    / mois
+                  </span>
                 </div>
                 <CardDescription className="mt-2">
                   Parfait pour les petites entreprises et marketeurs freelance.
@@ -220,10 +231,12 @@ export default function Home() {
                   </div>
                 </div>
                 <Link href="/pricing">
-                <Button size="lg" 
-                        className="w-full mt-6 bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700">
-                  Souscrire à Starter
-                </Button>
+                  <Button
+                    size="lg"
+                    className="w-full mt-6 bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+                  >
+                    Souscrire à Starter
+                  </Button>
                 </Link>
               </CardContent>
             </Card>
@@ -238,8 +251,100 @@ export default function Home() {
               </Badge>
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-xl mb-2">Pro</CardTitle>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-4xl font-bold bg-linear-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text">
+                    49.-
+                  </span>
+                  <span className="text-base text-muted-foreground">
+                    / mois
+                  </span>
+                </div>
+                <CardDescription className="mt-2">
+                  Pour les agences et les utilisateurs expérimentés.
+                </CardDescription>
               </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Toutes les fonctionnalités de Starter</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Interface de chat alimentée par l'IA</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <span>Support prioritaire</span>
+                  </div>
+                </div>
+                <Link href="/pricing">
+                  <Button
+                    size="lg"
+                    className="w-full mt-6 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  >
+                    Souscrire à Pro
+                  </Button>
+                </Link>
+              </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold mb-4">
+              Propulsé par des experts du secteur
+            </h2>
+            <p className="text-muted-foreground">
+              Construit avec une technologie et une sécurité de niveau
+              professionnel auxquelles vous pouvez faire confiance.
+            </p>
+          </div>
+
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center opacity-60
+          hover:opacity-80 transition-opacity duration-300"
+          >
+            <div className="flex items-center justify-center">
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <Globe className="h-6 w-6" />
+                <span>Bright Data</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <Zap className="h-6 w-6" />
+                <span>Vercel</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <MessageSquare className="h-6 w-6" />
+                <span>OpenAI</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="flex items-center gap-2 text-lg font-semibold">
+                <Shield className="h-6 w-6" />
+                <span>Clerk</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 
+            dark:bg-green-900/20 border border-green-200 dark:border-green-800"
+            >
+              <ShieldCheck className="h-4 w-4 text-green-600" />
+              <span className="text-sm font-medium text-green-700 dark:text-green-300">
+                Sécurité de niveau entreprise et disponibilité garantie à 99.9 %
+              </span>
+            </div>
           </div>
         </div>
       </section>
